@@ -169,9 +169,9 @@
         </section>
 
 
-        <!-- Today's Goal -->
+        <!-- Today's First Goal -->
         <section>
-          <h3>Goal for Today</h3>
+          <h3>Goal #1</h3>
           <div>
             Create a page that changes when you resize the browser viewport, and that fits on a mobile device screen.
           </div>
@@ -306,12 +306,9 @@
         </section>
 
                 <section>
-                  <h3>Upload via FTP</h3>
+                  <h3>Take a look on a phone</h3>
                   <ul>
-                    <li>Download <a href="https://filezilla-project.org/download.php?type=client">FileZilla</a></li>
-                    <li>Use username, server name, and pw to connect</li>
-                    <li>Create a directory using your first name</li>
-                    <li>Copy your files to your directory</li>
+                    <li><a href="http://iphone4simulator.com/">iphone4simulator.com/</a></li>
                   </ul>
                 </section>
 
@@ -344,11 +341,11 @@
         
         <section>
           <h3>Let's Develop It</h3>
-          <p>Add the following code to your hero-image div:</p>
+          <p>Find the following code in your hero-image div:</p>
           <pre><code class ="html">&lt;img src="http://placekitten.com/400/300" 
 alt="pensive kitten"&gt;
 </code></pre>
-<p>What happens when you resize the page?</p>
+<p>What happens when you resize the page to make it small or big?</p>
           <div class="fragment">Now add this to your style.css:
            <pre><code class ="html"> img {
   max-width: 100%;
@@ -371,6 +368,314 @@ class="small-image"&gt;
 </code></pre>
         </section>
 
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Using percentage widths & flexible images, add "Viral GIFs" photos to match <a href="images/design.jpg">our design</a>:</p>
+          <ul>
+            <li>Use <a href="http://placekitten.com">placekitten.com</a> (or <a href="http://placepuppy.it/">placepuppy.com</a> if you must)</li>
+            <li>Add 9 small images to your HTML</li>
+            <li>Use floats + percentage widths in your CSS</li>
+          </ul>
+
+          <a href="images/design.jpg"><img src="images/design_images.jpg" alt="Images in our mockup" width="600"></a>
+        </section>
+
+
+<!-- Review Quiz!! -->
+        <section>
+          <h3>The Fluid Grid</h3>
+          <p class="left-align">Q: For fluid grids, container widths should use <span class="red">___?</span> instead of pixels</p>
+            <p class="green left-align fragment">A: Percentages</li>
+          </ul>
+        </section>
+
+        <!-- Review Quiz!!!  -->
+        <section>
+          <h3>The Fluid Grid</h3>
+            <p class="left-align">Q: What is the formula to calculate your width percentage?</p>
+            <p class="green left-align fragment">A: Target ÷ context = result</span></li>
+          </ul>
+        </section>
+
+        <!-- Review Quiz!!!  -->
+        <section>
+          <h3>Viewport &lt;meta Tag&gt;</h3>
+          <p class="left-align">Q: The Viewport &lt;meta&gt; tag changes the <span class="red">_____?</span> of your HTML document:</p>
+              <ol style="list-style-type: upper-alpha;" class="left-align">
+                <li class="left-align">Width</li>
+                <li class="left-align">Aspect Ratio</li>
+                <li class="left-align">Scale</li>
+                <li class="left-align">Height</li>
+              </ol>
+           <p class="green left-align fragment">A: C. Scale</p>
+          </ul>
+        </section>     
+
+
+        <!-- Goal #2 -->
+        <section>
+          <h3>Goal #2</h3>
+          <div>
+            Add media queries to optimize our layout for different screen sizes - making a mobile-first website!
+          </div>
+        </section>   
+
+        <section>
+          <h3>Max Width Styles</h3>
+          <p class="left-align">For many responsive styles, you  want to impose a maximum width on your elements that have percentage values:</p>
+          <pre><code class ="css">.gifs img {
+  width: 33%;
+  max-width: 85px;
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul class="left-align">
+            <li>Add max-width values to your elements with percentages.</li>
+            <li>Hint: Use your old <strong>pixel width values</strong> for your max-width values. (Aren't you glad you kept those in a comment?)</li>
+          </ul>
+
+          <pre><code class ="css">.gifs img {
+  width: 33%;
+  max-width: 85px;
+}
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+</code></pre>
+        </section>
+
+
+        <section>
+          <h3>Fluid Video, etc.</h3>
+          <ul>
+            <li>Video, slideshows, etc can also be made flexible</li>
+            <li>For video: <a href="http://fitvidsjs.com/">FitVids.js</a> jQuery plugin</li>
+            <li>Or, just add a max-width: 100% (or other value)!</li>
+          </ul>
+
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3>
+          <ul>
+            <li>Find a cute cat video on Youtube.com</li>
+            <li>Add the embed code to your HTML</li>
+            <li>Add a flexible width and a max-width to the YouTube element</li>
+          </ul>
+<pre><code class ="css">.container {
+  width: 100%;
+  max-width: 960px;
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Fluid Grid Problem!</h3>
+          <p>Sometimes our fluid grids are too small to fit our content nicely in our design at small screen sizes:</p>
+          <img src="images/squishedgrid.png" alt="Squished grid is too squished">
+        </section>
+
+        <section>
+          <h3>Media Queries</h3>
+          <p class="left-align"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">Media Queries</a> apply CSS based on conditions that you decide (usually width, but can also be resolution, device size, height, media type).</p>
+          <pre><code class ="css">@media print {
+  * {
+    background: white !important;
+  }
+}
+</code></pre>
+          <pre><code class ="css">@media only screen and (min-width:600px) {
+  header { 
+    /* styles for only 600px wide & up */ 
+  }
+}
+</code></pre>
+        </section>
+
+                <section>
+          <h3>Media Queries</h3>
+          <p class="left-align">Just like with a print stylesheet, you can add media queries based on screen size to any element you want:</p>
+          <ul>
+            <li><a href="http://codepen.io/bradfrost/full/orKvD" target="_blank">Widths</a></li>
+            <li>
+              <a href="http://codepen.io/bradfrost/full/vcuem">Floats</a></li>
+            <li><a href="http://www.weblinc.com/">Font size and style</a></li>
+            <li><a href="http://www.visitderby.co.uk/">Hovers</a></li>
+            <li><a href="http://2013.dconstruct.org/">Navigation</a></li>
+            <li><a href="http://www.julianabicycles.com/">Click/Tap Targets likes links and buttons</a></li>
+            <li><a href="http://codepen.io/bradfrost/full/orJwL">Content that you want to display or hide</a></li></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Media Queries</h3>
+          <p>Most important elements to target with media queries are usually layout-related, like your fluid grid styles.</p>
+          <pre><code class ="css">.container {
+  margin: 0 auto;
+  width: 100%;
+}
+@media only screen and (min-width:960px) {
+  .container { 
+    width: 960px;
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p class="left-align">Fix your squished grid callout styles:</p>
+          <ul>
+            <li>Move your .callout divs' width and float styles inside a media query</li>
+            <li>Fix styles as needed for your default CSS</li>
+          </ul>
+          <pre><code class ="css">@media only screen and (min-width:960px) {
+  .callout { 
+    margin: 0 ??% 0 0;
+    width: ???%;
+    float: left;
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Callout Divs Stacked</h3>
+          <p class="left-align">Here's how our callout divs should look now, without floats or widths on the left, and with floats and widths on the right:</p>
+          
+          <a href="images/callout_stacked_small.png"><img src="images/callout_stacked_small.png" width=250></a>
+          <a href="images/callout_floated_large.png"><img src="images/callout_floated_large.png" width=450 style="vertical-align:top"></a>
+
+        </section>
+
+        <section>
+          <h3>Media Queries</h3>
+          <p>Media queries can also use:</p>
+          <ul>
+            <li>em values instead of pixels</li>
+            <li>max-width</li>
+            <li>min AND max-width parameters</li>
+            <li>resolution parameters</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Media_features" title="Media query options">many more</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Media Queries with Ems</h3>
+          <p>Convert pixel values to ems with <a href="http://pxtoem.com/" title="Covert Pixels to Ems">pxtoem.com</a>
+          <pre><code class ="css">@media only screen and (min-width:60em) {
+  .container { 
+    width: 100%;
+    max-width: 960px;
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Media Queries using Max-Width</h3>
+          <p>Use multiple parameters to target in-between sizes (aka breakpoints)</p>
+          <pre><code class ="css">@media only screen and (min-width:700px) and (max-width: 800px) {
+  .nav { 
+    font-size: 110%;
+  }
+}
+</code></pre>
+        </section>
+
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p class="left-align">Make a mobile-first responsive site:</p>
+          <ul>
+            <li>Move ALL your floats & widths into a media query for 960px wide viewports and up.</li>
+            <li>Fix styles as needed for your default CSS - this is the mobile first stuff!</li>
+            <li>Resize browser & test on devices to see your media query kick in at the larger screen size.</li>
+            <li><strong>BONUS!</strong> Use ems instead of pixels for your media query breakpoint.</li>
+          </ul>
+        </section>
+
+        <!-- Breakpoints -->
+
+        <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">The points in your layout where you add a media query, or where things shift and change.</p>
+          <pre><code class ="css">/* this is a 60em or 960px wide breakpoint */
+@media only screen and (min-width:60em) { 
+  .container { 
+    width: 100%;
+    max-width: 960px;
+  }
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">These can be based on popular device sizes, like iPhone, iPad and desktop resolutions:</p>
+          <pre><code class ="css">.container { width: 100%; }
+@media only screen and (min-width:320px) { 
+  .container { 
+    margin: 0 auto;
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
+}
+</code></pre>
+<p class="left">Example: <a href="http://www.eataly.com/">Eataly</a></p>
+        </section>
+
+                <section>
+          <h3>Breakpoints</h3>
+          <p class="left-align">Breakpoints can also be more fluid, and added only where the layout starts to look funky:</p>
+          <pre><code class ="css">.hero-image { width: 100%; }
+@media only screen and (min-width:530px) { 
+  .container { 
+    float: left;
+    width: 41.6666666666667%; /* 400px/960px */;
+  }
+}
+</code></pre>
+<p class="left-align">Example: <a href="http://bohconf.com/">BohConf</a></p>
+        </section>
+
+        <!-- Let's Develop It -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add media queries for breakpoints that are the size of popular mobile devices (phones, tablets, etc)</li>
+            <li>Look up these screen resolutions - try looking up your own devices</li>
+            <li>Try changing the widths at these breakpoints to mimic the rigid grid layouts we looked at.</li>
+            <li>Helpful tools:
+              <ul>
+                <li>
+                  <a href="http://responsivepx.com/">Breakpoint Finder</a> - works on local sites
+                </li>
+                <li>
+                  <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
+                </li>
+                <li>
+                  <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </section>
 
 
         <!-- -->
