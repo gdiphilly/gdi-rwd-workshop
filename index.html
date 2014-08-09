@@ -908,7 +908,6 @@ class="small-image"&gt;
             <li>Use navigation best practices to make your nav menu touch-friendly and usable at small screen sizes.</li>
             <li>Use the <a href="#/27">"Nav Bar"</a> or <a href="#/27">"Stacked List"</a> design pattern to accomplish this for small screens.</li>
             <li>Use media queries to change the nav bar to match our original design at larger screen sizes where it fits the layout best.</li>
-            <!-- next exercise we will use our nav styles to build a toggle menu that shows/hides our small screen nav on click/touch/tap -->
           </ul>
         </section>
 
@@ -943,6 +942,25 @@ Build a <a href="http://codepen.io/bradfrost/full/sHvaz">toggle menu</a> that sh
         </section>
 
         <section>
+          <h3>Writing JavaScript with jQuery</h3>
+              <ul>
+                <li><a href="http://jquery.com">jQuery</a> is a JavaScript framework</li>
+                <li>Learn more from <a href="https://github.com/girldevelopit/gdi-core-javascript">Girl Develop It materials</a></li>
+                <li>Easy to learn syntax and <strong>DOM</strong> manipulation</li>
+              </ul>
+              </p>
+        </section>
+
+<!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+          <li>Add jQuery to the bottom of your index.html file</li>
+          <li>Inspect or View Source in your browser to make sure it's loading</li>
+        </ul>
+        </section>
+
+        <section>
           <h3>jQuery Toggle</h3>
               <p class="left-align"><a href="http://api.jquery.com/toggle/">Toggle</a> refers to showing/hiding element</p>
 
@@ -960,7 +978,7 @@ Syntax looks like:
 
         </p>
 
-        <pre><code contenteditable class ="javascript">$('.clickme').click(function() {
+        <pre><code contenteditable class ="javascript">$('.button').click(function() {
   $('nav').toggle();
 });</code></pre>
         </section>
@@ -969,7 +987,7 @@ Syntax looks like:
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-          <li>Add a button to your page that will trigger the menu toggle</li>
+          <li>Add a button to your HTML (this will trigger the menu toggle!)</li>
           <li>Add the toggle event code to your page underneath your jQuery include (~line 130), inside a &lt;script&gt; tag:</li>
         </ul>
          <pre><code contenteditable class ="javascript">&lt;script&gt;
@@ -987,7 +1005,7 @@ $('.toggle-button').click(function() {
         </p>
 
         <pre><code contenteditable class ="css">@media (min-width: 500px) {
-  .toggle-nav {
+  .toggle-button {
     display: none;
   }
 }</code></pre>
@@ -997,39 +1015,47 @@ $('.toggle-button').click(function() {
         <section>
           <h3>jQuery Toggle on Resize</h3>
         <p class="left-align">
-        We need extra code to handle when the browser window is resized. With Javascript you can check the window size using if statements.
+        What happens when we click our button to hide the nav, then resize our browser window to make it wider?
         </p>
+        <ul>
+          <li>Our button disappears!</li>
+          <li>And our nav is still gone!</li>
+          <li>Halp</li>
+        </ul>
+        </section>
+
+        <section>
+          <h3>CSS Media Queries to the Rescue</h3>
+        <p class="left-align">
+        Take a look in the inspector and we see that the jQuery toggle just adds an <em>inline style</em>, which we can override with media queries to make our nav show on large screens:
+        </p>
+<pre><code contenteditable class ="css">@media (min-width: 500px) {
+  .nav {
+    display: block !important;
+  }
+}</code></pre>
         </section>
 
         <section>
           <h3>Let's Develop It</h3>
         <ul>
-        <li>
-        Use the provided<a href="template/nav.js" target="_blank">Javascript code</a> to create a stacked nav that toggles. Style the nav as <a href="http://codepen.io/bradfrost/full/vcuem" target="_blank">stacked</a> for mobile first in your default CSS, then make it <a href="http://codepen.io/bradfrost/full/Egaql" target="_blank">horizontal</a> in your media query for larger scresn sizes. 
-        </li>
-        <li>You may need to adjust the provided JS window width check to match your media queries for when the toggle button appears.</li>
+          <li>Add media queries to your CSS to <strong>hide the toggle-button</strong> and <strong>show the header nav</strong> for large screen sizes</li>
+          <li>Style the nav as <a href="http://codepen.io/bradfrost/full/vcuem" target="_blank">stacked</a> for mobile first in your default CSS, then make it <a href="http://codepen.io/bradfrost/full/Egaql" target="_blank">horizontal</a> in your media query for larger screen sizes. 
+          </li>
       </ul>
         </section>
 
         <section>
           <h3>Bonus Nav!</h3>
         <ul>
-        <li>
-        In your template file, check the js/menu folder for an example of the <a href="http://codepen.io/bradfrost/full/hkuzA" target="_blank">select menu</a> design pattern. 
-        </li>
-        <li>Open the <a href="template/js/menu/index.html">template/js/menu/index.html</a> file and resize to see it in action.</li>
-      </ul>
+          <li>
+          In your template file, check the js/menu folder for an example of the <a href="http://codepen.io/bradfrost/full/hkuzA" target="_blank">select menu</a> design pattern. 
+          </li>
+          <li>Open the <a href="template/js/menu/index.html">template/js/menu/index.html</a> file and resize to see it in action.</li>
+        </ul>
         </section>
 
-        <section>
-          <h3>Slideshow</h3>
-          <p class = "left-align">
-          <a href="http://www.slidesjs.com/" target="_blank">SlidesJS</a> is a responsive, touch-friendly jQuery plugin for making slideshows.
-          </p>
-        </section>
-
-
-        <section>
+        <!-- <section>
           <h3>Forms</h3>
               <p class="left-align"><span class="blue">Form Inputs for Mobile</span>
               <a href="http://www.w3.org/TR/mobile-bp/#bpgroupinput">W3C says:</a></p>
@@ -1080,7 +1106,7 @@ Position labels so they lay out properly in relation to the form controls they r
             <li>Make your table responsive using <a href="http://codepen.io/aarongustafson/full/ucJGv">this example</a>'s styles as a guide</li>
           </ul>
 
-        </section>  
+        </section>   -->
 
         <section>
           <h3>Performance Best Practices</h3>
@@ -1105,12 +1131,12 @@ Position labels so they lay out properly in relation to the form controls they r
 
           </p>
         </section>
-        
+<!--         
         <section>
           <h3>Progressive Enhancement</h3>
           <p class="left-align">Hint: we already did some of this using media queries to progressively enhance for screen size, retina resolution, etc.
           </p>
-        </section>
+        </section> -->
 
         <section>
           <h3>Browser Support</h3>
@@ -1118,6 +1144,12 @@ Position labels so they lay out properly in relation to the form controls they r
 
         </section>
 
+        <section>
+          <h3>Media Queries</h3>
+          <p class="left-align">What browsers support media queries?</p>
+          <p class="left-align">Most, except old IE (IE8 and below)</p>
+<a href="http://caniuse.com/#feat=css-mediaqueries"><img src="images/caniuse_mediaqueries.png" alt="Media Queries are not supported by IE8"></a>
+        </section>
 
         <section>
           <h3>Browser Support</h3>
@@ -1126,41 +1158,8 @@ Position labels so they lay out properly in relation to the form controls they r
           <p class="left-align">Modernizr adds classes to the &lt;body&gt; element</p>
             <ul>
               <li>Classes let us style things differently for browsers that support certain features</li>
-              <li>Includes classes for features like media queries, box-sizing, mutiple bgs, background-size, box-shadow, font-face, gradients...etc</li>
+              <li>Includes classes for features like media queries, box-sizing, multiple bgs, background-size, box-shadow, font-face, gradients...etc</li>
             </ul>
-        </section>
-
-                <section>
-          <h3>Let's Develop It</h3>
-          <p class="left-align">You should already have Modernizr built into your template, let's use it!</p>
-
-            <ul>
-              <li>Inspect the &lt;body&gt; element to see what classes it has</li>
-              <li>Write styles using the .boxshadow and .borderradius classes for your button styles</li>
-              <li>Test using <a href="http://www.browserstack.com/">Browser Stack</a> free trial or <a href="http://netrenderer.com/index.php">Net Renderer</a> if you don't have old IE</li>
-            </ul>
-<pre><code contenteditable class ="css">.borderradius .button {
-  border-radius: 4px;
-}</code></pre>
-
-        </section>
-
-        <section>
-
-          What's the other side of Progressive enhancement?
-
-          <h3>...Graceful Degradation</h3>
-          <div class="left-align fragment">A site should GRACEFULLY DEGRADE when a browser does not support fully the features of our design and build.
-          This applies to browsers or devices like:
-          <ul>
-            <li>IE!</li>
-            <li>BlackBerry!</li>
-            <li>Older Android</li>
-            <li>Older iOS</li>
-            <li>Opera Mobile</li>
-            <li>No Javascript enabled</li>
-            <li>etc</li>
-          </ul>
         </section>
 
         <section>
