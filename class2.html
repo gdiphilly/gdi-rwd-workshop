@@ -28,7 +28,7 @@
                 <section>
                     <img src = "images/gdi_logo_badge.png" class="badge">
                     <h3>Responsive Web Design</h3>
-                    <a href="http://leekinney.github.io/gdi-rwd-workshop/class2.html">leekinney.github.io/gdi-rwd-workshop/class2.html</a></br>
+                    <a href="http://bit.ly/rwd-class-2">bit.ly/rwd-class-2</a></br>
                     <a href="http://leekinney.github.io/gdi-rwd-workshop/gdi-rwd-workshop.zip">Download Slides</a>
                 </section>
                 <!-- Welcome-->
@@ -48,7 +48,7 @@
                 <!-- Opening slide -->
                 <section>
                     <h3>Class 2 Slides:</h3>
-                    <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/rwd2</p>
+                    <p class="blue" style="font-size: 3em; text-decoration: underline;">bit.ly/rwd-class-2</p>
                 </section>
                 <!-- Review -->
                 <section>
@@ -299,8 +299,8 @@ Syntax looks like:
 <p class="left-align">
 We want this toggle to show or hide our nav on <strong>alternate clicks</strong> so we put this toggle inside a <strong>click event</strong>:
 </p>
-        <pre><code contenteditable class ="javascript">$('.button').click(function() {
-  $('nav').toggle();
+<pre><code contenteditable class ="javascript">$('.button').click(function() {
+    $('nav').toggle();
 });</code></pre>
 </section>
 <!-- Exercise-->
@@ -310,9 +310,9 @@ We want this toggle to show or hide our nav on <strong>alternate clicks</strong>
 <li>Add a button to your HTML (this will trigger the menu toggle!)</li>
 <li>Add the toggle event code to your page underneath your jQuery include (~line 130), inside a &lt;script&gt; tag:</li>
 </ul>
-         <pre><code contenteditable class ="javascript">&lt;script&gt;
+<pre><code contenteditable class ="javascript">&lt;script&gt;
 $('.toggle-button').click(function() {
-  $('header nav').toggle();
+    $('header nav').toggle();
 });
 &lt;/script&gt;</code></pre>
 </section>
@@ -321,8 +321,8 @@ $('.toggle-button').click(function() {
 <p class="left-align">
 This toggle button should only show at small screen sizes, so hide it with CSS inside a media query for large screen sizes:
 </p>
-        <pre><code contenteditable class ="css">@media (min-width: 500px) {
-  .toggle-button {
+<pre><code contenteditable class ="css">@media (min-width: 500px) {
+.toggle-button {
     display: none;
   }
 }</code></pre>
@@ -344,9 +344,9 @@ What happens when we click our button to hide the nav, then resize our browser w
 Take a look in the inspector and we see that the jQuery toggle just adds an <em>inline style</em>, which we can override with media queries to make our nav show on large screens:
 </p>
 <pre><code contenteditable class ="css">@media (min-width: 500px) {
-  .nav {
-    display: block !important;
-  }
+    .nav {
+        display: block !important;
+    }
 }</code></pre>
 </section>
 <section>
