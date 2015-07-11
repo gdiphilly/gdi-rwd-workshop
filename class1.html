@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive Web Design, Girl Develop IT</title>
+        <meta name="description" content="This is the Girl Develop It Responsive Web Design course. Materials by Catherine Farman, based on material by Sophie Shepherd.
+        The course is meant to be taught in 1 5-hour workshop. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+        <meta name="author" content="Girl Develop It">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
+        <!-- For syntax highlighting -->
+        <!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
+        <!-- dark editor<link rel="stylesheet" href="reveal.js/lib/css/dark.css"> -->
+        <!-- If use the PDF print sheet so students can print slides-->
+        <link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <!-- Opening slide -->
+                <section>
+                    <img src = "images/gdi_logo_badge.png" class="badge">
+                    <h3>Responsive Web Design</h3>
+                    <a href="http://leekinney.github.io/gdi-rwd-workshop">leekinney.github.io/gdi-rwd-workshop</a></br>
+                    <a href="http://leekinney.github.io/gdi-rwd-workshop/gdi-rwd-workshop.zip">Download Slides</a>
+                </section>
+                <!-- Welcome-->
+                <section>
+                    <h3>Welcome!</h3>
+                    <div>
+                        <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+                        <p class ="green">Some "rules"</p>
+                        <ul>
+                            <li>We are here for you!</li>
+                            <li>Every question is important</li>
+                            <li>Help each other</li>
+                            <li>Have fun</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Welcome!</h3>
+                    <div class = "left-align">
+                        <p>I'm LeeAnn Kinney</p>
+                        <p>I'm LeeAnn Kinney</p>
+                        <ul>
+                            <li>Front End Developer</li>
+                            <li>Girl Develop It Philly Organizer</li>
+                            <li><a href="http://ladyhacks.org/">LadyHacks</a> &amp; <a href="http://elaconf.com/">Ela Conf</a> Organizer</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Welcome!</h3>
+                    <div class = "left-align">
+                        <p>Tell us about yourself.</p>
+                        <ul>
+                            <li>Who are you?</li>
+                            <li>What do you hope to get out of the class?</li>
+                            <li>What's something no one in this room knows about you?</li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Terms-->
+                <section>
+                    <h3>Terms</h3>
+                    <ul>
+                        <li>
+                            <div class = "blue">Responsive Design</div>
+                            <div>Fluid grids + Flexible Images/Video + Media Queries</div>
+                        </li>
+                        <li>
+                            <div class = "blue">Viewport</div>
+                            <div>The visible area of a webpage in a browser window</div>
+                        </li>
+                        <li>
+                            <div class = "red">Mobile App</div>
+                            <div>Software that is downloaded to a mobile device - we will not cover this.</div>
+                        </li>
+                        <li>
+                            <div class = "red">Mobile website</div>
+                            <div>A separate website with its own domain built to target 'mobile devices', typically meaning smartphones. We're not covering this either.</div>
+                        </li>
+                    </ul>
+                </section>
+                <!-- Tools -->
+                <section>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>
+                            <div class = "yellow">Browser:</div>
+                            <div>Chrome</div>
+                            <div>Firefox</div>
+                        </li>
+                        <li>
+                            <div class = "yellow">Development Toolkit:</div>
+                            <div>Chrome - Inspector</div>
+                            <div>Firefox - Firebug</div>
+                        </li>
+                        <li>
+                            <div class = "yellow">Text Editor:</div>
+                            <div><a href="http://www.sublimetext.com/">Sublime Text - Mac or Windows</a><br>
+                            <a href="http://www.sublimetext.com/">sublimetext.com</a></div>
+                        </li>
+                    </ul>
+                </section>
+                <!-- Nitty gritty 1 - What is RWD? -->
+                <section>
+                    <h3>What is Responsive Web Design?</h3>
+                <blockquote class="quote">Responsive web design is an approach to web design in which a site is crafted to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling— <em>across a wide range of devices (from desktop computer monitors to mobile phones)</em>.</blockquote>
+                <cite>-Wikipedia</cite>
+            </section>
+            <!-- Examples -->
+            <section>
+                <h3>Examples</h3>
+                <ul>
+                    <li><a href="http://www.bostonglobe.com/">Boston Globe</a></li>
+                    <li><a href="http://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                    <li><a href="http://worldwildlife.org/">World Wildlife Fund</a></li>
+                    <li><a href="http://mediaqueri.es/">Media Queries</a></li>
+                </ul>
+            </section>
+            <!-- Why does it matter? -->
+            <section>
+                <h3>Why bother?</h3>
+                <p>As of May 2013:</p>
+                <ul>
+                    <li>56% of American adults have a smartphone</li>
+                    <li>28% of cell owners own an Android</li>
+                    <li>25% own an iPhone</li>
+                    <li>4% own a Blackberry</li>
+                    <li>34% of American adults own a tablet computer</li>
+                </ul>
+            </section>
+
+            <!-- Today's First Goal -->
+            <section>
+                <h3>Goal #1</h3>
+                <div>
+                    Create a page that changes when you resize the browser viewport, and that fits on a mobile device screen.
+                </div>
+                <ul>
+                    <li><a href="images/design.jpg">design.jpg</a></li>
+                    <li><a href="images/design.psd">design.psd</a></li>
+                    <li><a href="https://cfarm.github.
+                    io/gdi-rwd-workshop/templates.zip">Open template files (<u>cfarm.github.io/gdi-rwd-workshop/templates.zip</u>)</a></li>
+                </ul>
+            </section>
+            <!-- 3 Keys to RWD-->
+            <section>
+                <h3>Four Keys to Responsive Design</h3>
+                <ul>
+                    <li>A Fluid Grid</li>
+                    <li>Flexible Images</li>
+                    <li>Media Queries</li>
+                    <li>Viewport Meta Tag</li>
+                </ul>
+            </section>
+            <!--Fluid Grid -->
+            <section>
+                <h3>The Fluid Grid</h3>
+                <ul>
+                    <li>Define container widths as % instead of px</li>
+                    <li>Target ÷ context = result <span class="blue">(Important - write this down!)</span></li>
+                </ul>
+            </section>
+            <!-- Target ÷ context = result -->
+            <section>
+                <h3>Target ÷ context = result</h3>
+                <ul>
+                    <li>Target = width you desire in pixels</li>
+                    <li>Context = the container of the element - a div or could be the viewport</li>
+                    <li>Result is a percentage value you can use as a width in your CSS</li>
+                </ul>
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <img src="images/examplegrid_target.png" alt="480 pixel div target width">
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <img src="images/examplegrid_context.png" alt="960 pixel div container width">
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <div class="giant">
+                    480px ÷ 960px = <br>
+                    <strong>.50</strong>
+                </div>
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <div class="giant">
+                    .50 =<br>
+                    <strong class="green">50%</strong>
+                </div>
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <img src="images/examplegrid_target_percent.png" alt="fluid div with percentage width">
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <img src="images/examplegrid_all_percent.png" alt="fluid grid with percentages for all divs">
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <div>
+                                <pre><code contenteditable class ="css">.container {
+                          width: 960px;
+                          margin: 0 20px;
+                        }
+                        .main-column {
+                          width: 480px;
+                          margin-right: 20px;
+                        }
+                        .hero-image {
+                          width: 400px;
+                    }</code></pre>
+                </div>
+            </section>
+            <section>
+                <h3>The Fluid Grid</h3>
+                <div>
+                                <pre><code contenteditable class ="css">.container {
+                          width: 960px;
+                          margin: 0 4.1667%;
+                        }
+                        .main-column {
+                          width: 50%;
+                          margin-right: 4.1667%;
+                        }
+                        .hero-image {
+                          width: 41.667%;
+                    }</code></pre>
+                </div>
+            </section>
+            <!-- Exercise-->
+            <section>
+                <h3>Let's Develop It</h3>
+                <ul>
+                    <li>Open up your template index.html file in a browser</li>
+                    <li>Open style.css in the css folder in a text editor</li>
+                    <li>Make your page layout fluid!</li>
+                    <li>Hint: try this helpful calculator at <a href="http://www.rwdcalc.com/">rwdcalc.com</a></li>
+                    <!-- <li>Bonus: Test on devices by uploading your files via <a href="class1.html#/23">FTP</a></li> -->
+                </ul>
+                <div>
+                                <pre><code contenteditable class ="css">.container {
+                          width: 100%;
+                          margin: 0 4.1667%;
+                        }
+                        .main-column {
+                          width: 50%;
+                          margin-right: 4.1667%;
+                    }</code></pre>
+                </div>
+            </section>
+            <section>
+                <h3>Take a look on a "phone" or "tablet"</h3>
+                <ul>
+                    <li>In Chrome, open the Dev tools (View > Developer > Developer Tools) and follow <a href="http://www.sitepoint.com/use-mobile-emulation-mode-chrome/">these instructions</a></li>
+                    <li>In Firefox, select "Responsive Design View" from the Web Developer submenu in Tools or Menu list (<a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View">See instructions</a>)</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Viewport &lt;meta&gt; Tag</h3>
+                <p>Makes your page scale correctly on mobile devices.</p>
+                <div>
+                <pre style="width: 900px"><code contenteditable class ="html">&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
+            </div>
+            <p>Uncomment line 18 in your index.html file and compare on a mobile device to see the difference.</p>
+            <img src="images/no_meta_tag.png" class="fragment" width="300" />
+            <img src="images/meta_tag.png" class="fragment" width="300" />
+        </section>
+        <!-- Flexible Images -->
+        <section>
+            <h3>Flexible Images</h3>
+            <p>Like with fluid grids, percentages make images flexible in a page</p>
+                                  <pre><code contenteditable class ="css">img {
+                  max-width: 100%;
+            }</code></pre>
+        </section>
+        <section>
+            <h3>Let's Develop It</h3>
+            <p>Find the following code in your hero-image div:</p>
+                      <pre><code class ="html">&lt;img src="http://placekitten.com/400/300"
+                alt="pensive kitten"&gt;
+            </code></pre>
+            <p>What happens when you resize the page to make it small or big?</p>
+            <div class="fragment">Now add this to your style.css:
+                           <pre><code class ="html"> img {
+                      max-width: 100%;
+                    }
+                </code></pre>
+            </div>
+        </section>
+        <section>
+            <h3>Flexible Images</h3>
+            <p>What if you don’t want it to be 100% wide?</p>
+                      <pre><code class ="html">&lt;img src="http://placekitten.com/400/300"
+                alt="pensive kitten"
+                class="small-image"&gt;
+            </code></pre>
+                      <pre><code class ="html">.small-image {
+                  float: left;
+                  width: 50%;
+                }
+            </code></pre>
+        </section>
+        <section>
+            <h3>Let's Develop It</h3>
+            <p>Using percentage widths & flexible images, add "Viral GIFs" photos to match <a href="images/design.jpg">our design</a>:</p>
+            <ul>
+                <li>Use <a href="http://placekitten.com">placekitten.com</a> (or <a href="http://placepuppy.it/">placepuppy.com</a> if you must)</li>
+                <li>Add 9 small images to your HTML</li>
+                <li>Use floats + percentage widths in your CSS</li>
+            </ul>
+            <a href="images/design.jpg"><img src="images/design_images.jpg" alt="Images in our mockup" width="600"></a>
+        </section>
+        <!-- Review Quiz!! -->
+        <section>
+            <h3>The Fluid Grid</h3>
+            <p class="left-align">Q: For fluid grids, container widths should use <span class="red">___?</span> instead of pixels</p>
+        <p class="green left-align fragment">A: Percentages</li>
+    </ul>
+</section>
+<!-- Review Quiz!!!  -->
+<section>
+    <h3>The Fluid Grid</h3>
+    <p class="left-align">Q: What is the formula to calculate your width percentage?</p>
+<p class="green left-align fragment">A: Target ÷ context = result</span></li>
+</ul>
+</section>
+<!-- Review Quiz!!!  -->
+<section>
+<h3>Viewport &lt;meta Tag&gt;</h3>
+<p class="left-align">Q: The Viewport &lt;meta&gt; tag changes the <span class="red">_____?</span> of your HTML document:</p>
+<ol style="list-style-type: upper-alpha;" class="left-align">
+<li class="left-align">Width</li>
+<li class="left-align">Aspect Ratio</li>
+<li class="left-align">Scale</li>
+<li class="left-align">Height</li>
+</ol>
+<p class="green left-align fragment">A: C. Scale</p>
+</ul>
+</section>
+<!-- Goal #2 -->
+<section>
+<h3>Goal #2</h3>
+<div>
+Add media queries to optimize our layout for different screen sizes - making a mobile-first website!
+</div>
+</section>
+<section>
+<h3>Max Width Styles</h3>
+<p class="left-align">For many responsive styles, you  want to impose a maximum width on your elements that have percentage values:</p>
+          <pre><code class ="css">.gifs img {
+  width: 33%;
+  max-width: 85px;
+}
+</code></pre>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<ul class="left-align">
+<li>Add max-width values to your elements with percentages.</li>
+<li>Hint: Use your old <strong>pixel width values</strong> for your max-width values. (Aren't you glad you kept those in a comment?)</li>
+</ul>
+          <pre><code class ="css">.gifs img {
+  width: 33%;
+  max-width: 85px;
+}
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+</code></pre>
+</section>
+<section>
+<h3>Fluid Video, etc.</h3>
+<ul>
+<li>Video, slideshows, etc can also be made flexible</li>
+<li>For video: <a href="http://fitvidsjs.com/">FitVids.js</a> jQuery plugin</li>
+<li>Or, just add a max-width: 100% (or other value)!</li>
+</ul>
+</section>
+<section>
+<h3>Let's Develop It!</h3>
+<ul>
+<li>Find a cute cat video on Youtube.com</li>
+<li>Add the embed code to your HTML</li>
+<li>Add a flexible width and a max-width to the YouTube element</li>
+</ul>
+<pre><code class ="css">.container {
+  width: 100%;
+  max-width: 960px;
+}
+</code></pre>
+</section>
+<section>
+<h3>Media Queries</h3>
+<p class="left-align"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">Media Queries</a> apply CSS based on conditions that you decide (usually width, but can also be resolution, device size, height, media type).</p>
+          <pre><code class ="css">@media print {
+  * {
+    background: white !important;
+  }
+}
+</code></pre>
+          <pre><code class ="css">@media (min-width:600px) {
+  header {
+    /* styles for only 600px wide & up */
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<p class="left-align">Change your <em>header</em> element's background color so it's red at screen sizes larger than 600 pixels.</p>
+          <pre><code class ="css">header {
+  background: #0580C3;
+}
+@media (min-width:600px) {
+  header {
+    margin: 0 ??% 0 0;
+    width: ???%;
+    float: left;
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>Hmm...</h3>
+<p class="left-align">Where do you put your media queries??</p>
+<ul>
+<li>At the bottom of your stylesheet</li>
+<li>After your mobile-first CSS but before your Print styles</li>
+<li>After each element that needs a media query - you can have multiple media queries, even of the same type!</li>
+<li><strong>For Mobile First sites, always after your default CSS!</strong></li>
+<li>With min-width, in order by small to large values</li>
+</ul>
+</section>
+<section>
+<h3>Media Queries</h3>
+<p class="left-align">Just like with a print stylesheet, you can add media queries based on screen size to any element you want:</p>
+<ul>
+<li><a href="http://codepen.io/bradfrost/full/orKvD" target="_blank">Widths</a></li>
+<li>
+<a href="http://codepen.io/bradfrost/full/vcuem">Floats</a></li>
+<li><a href="http://www.weblinc.com/">Font size and style</a></li>
+<li><a href="http://www.visitderby.co.uk/">Hovers</a></li>
+<li><a href="http://2013.dconstruct.org/">Navigation</a></li>
+<li><a href="http://www.julianabicycles.com/">Click/Tap Targets likes links and buttons</a></li>
+<li><a href="http://codepen.io/bradfrost/full/orJwL">Content that you want to display or hide</a></li></li>
+</ul>
+</section>
+<section>
+<h3>Media Queries</h3>
+<p>Most important elements to target with media queries are usually layout-related, like your fluid grid styles.</p>
+          <pre><code class ="css">.container {
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width:960px) {
+  .container {
+    width: 960px;
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>Fluid Grid Problem!</h3>
+<p>Sometimes our fluid grids are too small to fit our content nicely in our design at small screen sizes:</p>
+<img src="images/squishedgrid.png" alt="Squished grid is too squished">
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<p class="left-align">Fix your squished grid callout styles:</p>
+<ul>
+<li>Move your .callout divs' width and float styles inside a media query</li>
+<li>Fix styles as needed for your default CSS</li>
+</ul>
+          <pre><code class ="css">.callout { width: 100%; }
+@media (min-width:960px) {
+  .callout {
+    margin: 0 ??% 0 0;
+    width: ???%;
+    float: left;
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>Callout Divs Stacked</h3>
+<p class="left-align">Here's how our callout divs should look now, without floats or widths on the left, and with floats and widths on the right:</p>
+<a href="images/callout_stacked_small.png"><img src="images/callout_stacked_small.png" width=250></a>
+<a href="images/callout_floated_large.png"><img src="images/callout_floated_large.png" width=450 style="vertical-align:top"></a>
+</section>
+<section>
+<h3>Media Queries</h3>
+<p>Media queries can also use:</p>
+<ul>
+<li>em values instead of pixels</li>
+<li>max-width</li>
+<li>min AND max-width parameters</li>
+<li>resolution parameters</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Media_features" title="Media query options">many more</a></li>
+</ul>
+</section>
+<section>
+<h3>Media Queries with Ems</h3>
+<p>Convert pixel values to ems with <a href="http://pxtoem.com/" title="Covert Pixels to Ems">pxtoem.com</a>
+          <pre><code class ="css">@media (min-width:60em) {
+  .container {
+    width: 100%;
+    max-width: 960px;
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>Media Queries using Max-Width</h3>
+<p>Use multiple parameters to target in-between sizes (aka breakpoints)</p>
+          <pre><code class ="css">@media (min-width:700px) and (max-width: 800px) {
+  .nav {
+    font-size: 110%;
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<p class="left-align">Make your <em>.content</em> div yellow between 700 and 800 pixels wide only, and green above 800 pixels</p>
+<pre><code class ="css">@media (min-width:700px) and (max-width: 800px) {
+  .content {
+    background-color: green;
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<p class="left-align">Make a mobile-first responsive site:</p>
+<ul>
+<li>Move ALL your floats & widths into a media query for 960px wide viewports and up.</li>
+<li>Add mobile first styles for your CSS that's not inside a media query: widths, padding, floats as needed, etc.</li>
+<li>Resize browser to see your media queries kick in at the larger screen size.</li>
+</ul>
+</section>
+<!-- Breakpoints -->
+<section>
+<h3>Breakpoints</h3>
+<p class="left-align">The points in your layout where you add a media query, or where things shift and change.</p>
+          <pre><code class ="css">/* this is a 60em or 960px wide breakpoint */
+@media (min-width:60em) {
+  .container {
+    width: 100%;
+    max-width: 960px;
+  }
+}
+</code></pre>
+</section>
+<section>
+<h3>???</h3>
+<p>How do you know what breakpoint you're looking at??</p>
+<ul>
+<li>Inspector and Dev Tools to the rescue!! Resize with your inspector open to see the viewport size in pixels</li>
+<li class="left-align">Add the <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size bookmarklet</a> to your browser!</li>
+</ul>
+</section>
+<section>
+<h3>Breakpoints</h3>
+<p class="left-align">These can be based on popular device sizes, like iPhone, iPad and desktop resolutions:</p>
+          <pre><code class ="css">.container { width: 100%; }
+@media (min-width:320px) {
+  .container {
+    margin: 0 auto;
+    width: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
+}
+</code></pre>
+<p class="left">Example: <a href="http://www.eataly.com/">Eataly</a></p>
+</section>
+<section>
+<h3>Breakpoints</h3>
+<p class="left-align">Breakpoints can also be more fluid, and added only where the layout starts to look funky:</p>
+          <pre><code class ="css">.hero-image { width: 100%; }
+@media (min-width:530px) {
+  .container {
+    float: left;
+    width: 41.6666666666667%; /* 400px/960px */;
+  }
+}
+</code></pre>
+<p class="left-align">Example: <a href="http://bohconf.com/">BohConf</a></p>
+</section>
+<!-- Let's Develop It -->
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Add media queries for breakpoints that are the size of popular mobile devices (phones, tablets, etc)</li>
+<li>Look up these screen resolutions - try looking up your own devices</li>
+<li>Try changing the widths at these breakpoints to mimic the rigid grid layouts we looked at.</li>
+<!--             <li>Helpful tools:
+    <ul>
+        <li>
+            <a href="http://responsivepx.com/">Breakpoint Finder</a> - works on local sites (using localhost)
+        </li>
+        <li>
+            <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a>
+        </li>
+        <li>
+            <a href="http://www.responsinator.com/">Responsinator</a> - mimics real device sizes
+        </li>
+    </ul>
+</li> -->
+</ul>
+</section>
+</div>
+<footer>
+<div class="copyright">
+Responsive Web Design ~ Girl Develop It ~
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+</div>
+</footer>
+</div>
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.min.js"></script>
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+</script>
+</body>
+</html>
