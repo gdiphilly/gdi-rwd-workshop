@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive Web Design, Girl Develop IT</title>
+        <meta name="description" content="This is the Girl Develop It Responsive Web Design course. Materials by Catherine Farman, based on material by Sophie Shepherd.
+        The course is meant to be taught in 1 5-hour workshop. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+        <meta name="author" content="Girl Develop It">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
+        <!-- For syntax highlighting -->
+        <!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
+        <!-- dark editor<link rel="stylesheet" href="reveal.js/lib/css/dark.css"> -->
+        <!-- If use the PDF print sheet so students can print slides-->
+        <link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <!-- Opening slide -->
+                <section>
+                    <img src = "images/gdi_logo_badge.png" class="badge">
+                    <h3>Responsive Web Design</h3>
+                    <a href="http://leekinney.github.io/gdi-rwd-workshop">leekinney.github.io/gdi-rwd-workshop</a></br>
+                    <a href="http://leekinney.github.io/gdi-rwd-workshop/gdi-rwd-workshop.zip">Download Slides</a>
+                </section>
+                <!-- Welcome-->
+                <section>
+                    <h3>Welcome!</h3>
+                    <div>
+                        <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+                        <p class ="green">Some "rules"</p>
+                        <ul>
+                            <li>We are here for you!</li>
+                            <li>Every question is important</li>
+                            <li>Help each other</li>
+                            <li>Have fun</li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Opening slide -->
+                <section>
+                    <h3>Class 2 Slides:</h3>
+                    <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/rwd2</p>
+                </section>
+                <!-- Review -->
+                <section>
+                    <h3>Four Keys to Responsive Design</h3>
+                    <ul>
+                        <li>A Fluid Grid</li>
+                        <li>Flexible Images</li>
+                        <li>Media Queries</li>
+                        <li>Viewport Meta Tag</li>
+                    </ul>
+                </section>
+                <!-- Review Quiz!!!  -->
+                <section>
+                    <h3>The Fluid Grid</h3>
+                    <p class="left-align">Q: For fluid grids, container widths should use <span class="red">___?</span> instead of pixels</p>
+                <p class="green left-align fragment">A: Percentages</li>
+            </ul>
+        </section>
+        <!-- Review Quiz!!!  -->
+        <section>
+            <h3>The Fluid Grid</h3>
+            <p class="left-align">Q: What is the formula to calculate your width percentage?</p>
+        <p class="green left-align fragment">A: Target ÷ context = result</span></li>
+    </ul>
+</section>
+<!-- Review Quiz!!!  -->
+<section>
+    <h3>Viewport &lt;meta Tag&gt;</h3>
+    <p class="left-align">Q: The Viewport &lt;meta&gt; tag changes the <span class="red">_____?</span> of your HTML document:</p>
+    <ol style="list-style-type: upper-alpha;" class="left-align">
+        <li class="left-align">Width</li>
+        <li class="left-align">Aspect Ratio</li>
+        <li class="left-align">Scale</li>
+        <li class="left-align">Height</li>
+    </ol>
+    <p class="green left-align fragment">A: Scale</p>
+</ul>
+</section>
+<!-- Goal -->
+<section>
+<h3>Goal #3</h3>
+<div>
+    Optimize our site design for small screens and mobile devices.
+</div>
+</section>
+<section>
+<h1>Best Practices</h1>
+</section>
+<!-- Terms-->
+<section>
+<h3>Terms</h3>
+<ul>
+    <li>
+        <div class = "blue">Best Practice</div>
+        <div>Method or technique that has consistently shown results superior to those achieved with other means, and that is used as a benchmark <a href="http://en.wikipedia.org/wiki/Best_practice">(Wikipedia)</a></div>
+    </li>
+    <li>
+        <div class = "blue">Design Pattern</div>
+        <div>Describe solutions to common usability or accessibility problems in a specific context<a href="http://en.wikipedia.org/wiki/Interaction_design_pattern">(Wikipedia)</a></div>
+    </li>
+</ul>
+</section>
+<!-- W3C Best Practices for Mobile Web Design -->
+<section>
+<h3>Mobile Web Design</h3>
+<p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#d0e630">Best practices recommended by the W3C</a>:</p>
+<ul>
+    <li>User experience is consistent across devices</li>
+    <li>Flexible styling is used instead of fixed pixels</li>
+    <li>Relevant content is most prominent element on a page</li>
+    <li>Irrelevant content does not appear</li>
+</ul>
+</section>
+<!-- W3C Best Practices for Mobile Web Design -->
+<section>
+<h3>Mobile Web Design</h3>
+<p class="left-align"><span class="blue">User Experience:</span>
+Ensure that content provided by accessing a URI yields a thematically coherent experience when accessed from different devices.
+</p>
+<img src="images/fifa_mobile.png" alt="" width=300>
+<a href="http://m.jcrew.com"><img src="images/mobile_jcrew.png" alt="" width=300 style="vertical-align: top"></a>
+</section>
+<!-- W3C Best Practices for Mobile Web Design -->
+<section>
+<h3>Mobile Web Design</h3>
+<p class="left-align"><span class="blue">Testing:</span>
+Carry out testing on actual devices as well as emulators.
+</p>
+<img src="images/my_devices.jpg" alt="">
+</section>
+<!-- W3C Best Practices for Mobile Web Design -->
+<section>
+<h3>Mobile Web Design</h3>
+<p class="left-align"><span class="blue">Content:</span>
+Ensure that material that is central to the meaning of the page precedes material that is not.
+</p>
+<a href="images/content_first.png" title=""><img src="images/content_first.png" alt="" width=300></a>
+<a href="images/grist_headline.png" title=""><img src="images/grist_headline.png" alt="" width=300></a>
+</section>
+<section>
+<a href="https://twitter.com/wilto/status/63284673723375616" title='“Mobile users want to see our menu, hours, and delivery number. Desktop users definitely want this 1mb png of someone smiling at a salad.”'><img src="images/wilto.png" alt='“Mobile users want to see our menu, hours, and delivery number. Desktop users definitely want this 1mb png of someone smiling at a salad.”'></a>
+</section>
+<!-- Let's Develop It -->
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Update our mobile-first CSS to make our content appear most prominent on the page</li>
+<li>Change styles to make nagivation and header less prominent, and text content the main feature without user having to scroll. <a href="images/design_small_stacked.png">Design guideline</a></li>
+<li>Use the <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size Bookmarklet</a> and <a href="index.html#/23">Dev Tools</a> to test your site on narrow screens and short screens
+</li>
+</ul>
+<a href="images/design_small_stacked.png"><img src="images/design_small_stacked.png" alt="Design Guideline for narrow screens"></a>
+</section>
+<!-- W3C Navigation Best Practices for Mobile Web Design -->
+<section>
+<h3>Mobile Web Design</h3>
+<p class="left-align"><a href="http://www.w3.org/TR/mobile-bp/#bpgroupnavlinks">Navigation Best practices recommended by the W3C</a>:</p>
+<ul>
+<li>
+Provide only minimal navigation at the top of the page.
+</li>
+<li>
+Provide consistent navigation mechanisms.
+</li>
+<li>
+Clearly identify the target of each link (e.g. no use of "Click here").
+</li>
+</ul>
+</section>
+<section>
+<h4>Provide only minimal navigation at the top of the page</h4>
+<a href="images/all_nav.png" title=""><img src="images/all_nav.png" alt="" width=250></a>
+<a href="images/texas_tribune.png" title=""><img src="images/texas_tribune.png" alt="" width=250></a>
+<a href="images/lifehacker_nav.png" title=""><img src="images/lifehacker_nav.png" alt="" width=250></a>
+</section>
+<section>
+<h4>Provide consistent navigation mechanisms</h4>
+<a href="images/brooklyn_museum.png" title=""><img src="images/brooklyn_museum.png" alt="" width=250></a>
+<a href="images/brooklyn_museum2.png" title=""><img src="images/brooklyn_museum2.png" alt="" width=250></a>
+<a href="images/brooklyn_museum3.png" title=""><img src="images/brooklyn_museum3.png" alt="" width=250></a>
+</section>
+<section>
+<h4>
+Clearly identify the target of each link <br> (no  "Click here").
+</h4>
+<a href="images/visitnow.png" title=""><img src="images/visitnow.png" alt="" width=350></a>
+<a href="images/boingboing.png" title=""><img src="images/boingboing.png" alt="" width=350></a>
+</section>
+<!-- Navigation Patterns -->
+<section>
+<h3>Navigation Patterns</h3>
+<div class="left-align">
+<ul>
+<li><a href="http://codepen.io/bradfrost/full/vcuem" title="">Stacked List</a></li>
+<li><a href="http://codepen.io/bradfrost/full/Egaql">Nav bar</a></li>
+<li><a href="http://codepen.io/bradfrost/full/hkuzA">Select menu</a></li>
+<li><a href="http://codepen.io/bradfrost/full/sHvaz">Toggle</a></li>
+<li><a href="http://codepen.io/bradfrost/full/IEBrz">Off Canvas</a></li>
+</ul>
+</div>
+<cite><a href="http://bradfrostweb.com/blog/web/responsive-nav-patterns/">(Responsive Nav Patterns)</a></cite>
+</section>
+<!-- Navigation Patterns -->
+<section>
+<h3>Navigating for Touch Devices</h3>
+<div class="left-align">
+<ul>
+<li>Apple minimum tap dimensions: 44x44pts</li>
+<li>Windows Phone guideline dimensions: 32x32pts</li>
+<li>User experience <a href="http://uxdesign.smashingmagazine.com/2012/02/21/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">research</a> suggests even larger dimensions for fingers/thumbs: 72x72px</li>
+<li>Extra padding on links</li>
+<li>Extra space around links</li>
+</ul>
+</div>
+</section>
+<section>
+<h3>Touch-friendly Navigation</h3>
+<blockquote class="quote">Your controls need to facilitate touch interaction. This might mean giving links in content body extra padding so they’re easier to tap. This might also mean you need to add extra space between items in an ordered list of links.</blockquote>
+<cite><a href="http://www.uxbooth.com/articles/considerations-for-mobile-design-part-3-behavior/">(Considerations for Mobile Design [Part 3: Behavior])</a></cite>
+</section>
+<section>
+<h3>Touch-friendly Links</h3>
+<blockquote class="quote">Touchable items should look like touchable items on handheld devices.</blockquote>
+<cite><a href="http://www.uxbooth.com/articles/considerations-for-mobile-design-part-3-behavior/">(Considerations for Mobile Design [Part 3: Behavior])</a></cite>
+<p class="left-align" style="margin-top:2em">
+Style nav links or callout links as buttons with borders, bolded text & background colors that stand out from other non-nagivation links and text.
+</p>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Use navigation best practices to make your nav menu touch-friendly and usable at small screen sizes.</li>
+<li>Use the <a href="#/27">"Nav Bar"</a> or <a href="#/27">"Stacked List"</a> design pattern to accomplish this for small screens.</li>
+<li>Use media queries to change the nav bar to match our original design at larger screen sizes where it fits the layout best.</li>
+</ul>
+</section>
+<!-- Goal -->
+<section>
+<h3>Goal #4</h3>
+<div>
+Make a responsive navigation menu that clicks to open on small screens.
+</div>
+</section>
+<section>
+<h3>Responsive Navigation</h3>
+<ul>
+<li>Provide only minimal navigation at the top of the page</li>
+<li>
+Provide consistent navigation mechanisms.
+</li>
+<li>Should be touch-friendly with large, tappable buttons</li>
+</ul>
+</section>
+<section>
+<h3>Responsive Navigation</h3>
+<p class="left-align">How do we reconcile these requirements?</p>
+<p class="left-align">
+Build a <a href="http://codepen.io/bradfrost/full/sHvaz">toggle menu</a> that shows/hides our small screen nav on click/touch.
+</p>
+</section>
+<section>
+<h3>Writing JavaScript with jQuery</h3>
+<ul>
+<li><a href="http://jquery.com">jQuery</a> is a JavaScript framework</li>
+<li>Learn more from <a href="https://github.com/girldevelopit/gdi-core-javascript">Girl Develop It materials</a></li>
+<li>Easy to learn syntax and <strong>DOM</strong> manipulation</li>
+</ul>
+</p>
+</section>
+<!-- Exercise-->
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Add jQuery to the bottom of your index.html file</li>
+<li>Inspect or View Source in your browser to make sure it's loading</li>
+</ul>
+</section>
+<section>
+<h3>jQuery Toggle</h3>
+<p class="left-align"><a href="http://api.jquery.com/toggle/">Toggle</a> refers to showing/hiding element</p>
+<p class="left-align">
+Syntax looks like:
+</p>
+<pre><code contenteditable class ="javascript">$('nav').toggle();</code></pre>
+</section>
+<section>
+<h3>jQuery Toggle</h3>
+<p class="left-align">
+We want this toggle to show or hide our nav on <strong>alternate clicks</strong> so we put this toggle inside a <strong>click event</strong>:
+</p>
+        <pre><code contenteditable class ="javascript">$('.button').click(function() {
+  $('nav').toggle();
+});</code></pre>
+</section>
+<!-- Exercise-->
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Add a button to your HTML (this will trigger the menu toggle!)</li>
+<li>Add the toggle event code to your page underneath your jQuery include (~line 130), inside a &lt;script&gt; tag:</li>
+</ul>
+         <pre><code contenteditable class ="javascript">&lt;script&gt;
+$('.toggle-button').click(function() {
+  $('header nav').toggle();
+});
+&lt;/script&gt;</code></pre>
+</section>
+<section>
+<h3>jQuery Toggle for Mobile Only</h3>
+<p class="left-align">
+This toggle button should only show at small screen sizes, so hide it with CSS inside a media query for large screen sizes:
+</p>
+        <pre><code contenteditable class ="css">@media (min-width: 500px) {
+  .toggle-button {
+    display: none;
+  }
+}</code></pre>
+</section>
+<section>
+<h3>jQuery Toggle on Resize</h3>
+<p class="left-align">
+What happens when we click our button to hide the nav, then resize our browser window to make it wider?
+</p>
+<ul>
+<li>Our button disappears!</li>
+<li>And our nav is still gone!</li>
+<li>Halp</li>
+</ul>
+</section>
+<section>
+<h3>CSS Media Queries to the Rescue</h3>
+<p class="left-align">
+Take a look in the inspector and we see that the jQuery toggle just adds an <em>inline style</em>, which we can override with media queries to make our nav show on large screens:
+</p>
+<pre><code contenteditable class ="css">@media (min-width: 500px) {
+  .nav {
+    display: block !important;
+  }
+}</code></pre>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Add media queries to your CSS to <strong>hide the toggle-button</strong> and <strong>show the header nav</strong> for large screen sizes</li>
+<li>Style the nav as <a href="http://codepen.io/bradfrost/full/vcuem" target="_blank">stacked</a> for mobile first in your default CSS, then make it <a href="http://codepen.io/bradfrost/full/Egaql" target="_blank">horizontal</a> in your media query for larger screen sizes.
+</li>
+</ul>
+</section>
+<section>
+<h3>Bonus Nav!</h3>
+<ul>
+<li>
+In your template file, check the js/menu folder for an example of the <a href="http://codepen.io/bradfrost/full/hkuzA" target="_blank">select menu</a> design pattern.
+</li>
+<li>Open the <a href="template/js/menu/index.html">template/js/menu/index.html</a> file and resize to see it in action.</li>
+</ul>
+</section>
+<!-- <section>
+<h3>Forms</h3>
+<p class="left-align"><span class="blue">Form Inputs for Mobile</span>
+<a href="http://www.w3.org/TR/mobile-bp/#bpgroupinput">W3C says:</a></p>
+<ul>
+<li>Keep the number of keystrokes to a minimum.</li>
+<li>
+Avoid free text entry where possible. Provide pre-selected default values instead.
+</li>
+<li>
+Label all form controls appropriately and explicitly associate labels with form controls.
+</li>
+<li>
+Position labels so they lay out properly in relation to the form controls they refer to.
+</li>
+<li><a href="http://uxdesign.smashingmagazine.com/2010/03/11/forms-on-mobile-devices-modern-solutions/">More guidelines</a></li>
+</ul>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Add this <a href="template/form.html">form HTML</a> inside your .callout-container div</li>
+<li>Style it so the labels are vertical for mobile first, and then horizontal in a media query. <a href="http://codepen.io/chriscoyier/full/DmnlJ">Example</a></li>
+<li>You may have to adjust your layout (widths, percentage values, etc) to make this form fit!!</li>
+<li>BONUS! Add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">default values</a> to your form.</li>
+</ul>
+</section>
+<section>
+<h3>Tricky Tables</h3>
+<p class="left-align">Options for squeezing tables:</p>
+<ul>
+<li>Pinch it down to small size with good ol' max-width: 100% or percentage width</li>
+<li>Don't use a table for data but maybe a list where possible</li>
+<li><a href="http://codepen.io/aarongustafson/full/ucJGv">CSS trickery</a> to re-style table data vertically instead of horizontally</li>
+<li><a href="http://bradfrost.github.io/this-is-responsive/patterns.html#tables">More</a></li>
+</ul>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<ul>
+<li>Add a table inside your .main-column div</li>
+<li>Make your table responsive using <a href="http://codepen.io/aarongustafson/full/ucJGv">this example</a>'s styles as a guide</li>
+</ul>
+</section>   -->
+<section>
+<h3>Performance Best Practices</h3>
+<p class = "left-align">
+Keep the number of externally linked resources to a minimum. Each linked resource (images, style sheets and other objects) requires a separate request across the network. This may add significantly to the load time of the page in the mobile context.
+</p>
+<p class = "left-align">
+<span class="blue">Solution:</span> Use sprites for images, minify & combine CSS, minify & combine JS
+</p>
+</section>
+<section>
+<h3>Performance Best Practices</h3>
+<p class = "left-align">
+Limit content to what the user has requested.
+Mobile users often pay for bandwidth, so offering them content that is extraneous to their needs, especially advertising, costs them time and money and contributes to an unsatisfactory experience. In general, the user's consent should be sought before initiating the download of content.</p>
+<p class = "left-align">
+<span class="blue">Solution</span>: If hiding content, use appropriate methods to NOT load the content if it's not going to be useful for mobile user.
+*P.S. If it's not useful for a mobile user, it's probably not useful for anyone. Consider getting rid of it for ALL devices*
+</p>
+</section>
+<!--
+<section>
+<h3>Progressive Enhancement</h3>
+<p class="left-align">Hint: we already did some of this using media queries to progressively enhance for screen size, retina resolution, etc.
+</p>
+</section> -->
+<section>
+<h3>Browser Support</h3>
+<p class="left-align">Check browser support for specific features at <a href="http://caniuse.com" target="_blank">caniuse.com</a></p>
+</section>
+<section>
+<h3>Media Queries</h3>
+<p class="left-align">What browsers support media queries?</p>
+<p class="left-align">Most, except old IE (IE8 and below)</p>
+<a href="http://caniuse.com/#feat=css-mediaqueries"><img src="images/caniuse_mediaqueries.png" alt="Media Queries are not supported by IE8"></a>
+</section>
+<section>
+<h3>Browser Support</h3>
+<p class="left-align">Write CSS for specific features using <a href="http://modernizr.com/" target="_blank">Modernizr</a></p>
+<p class="left-align">Modernizr adds classes to the &lt;body&gt; element</p>
+<ul>
+<li>Classes let us style things differently for browsers that support certain features</li>
+<li>Includes classes for features like media queries, box-sizing, multiple bgs, background-size, box-shadow, font-face, gradients...etc</li>
+</ul>
+</section>
+<section>
+<h3>Let's Develop It</h3>
+<p class="left-align">You should already have Modernizr built into your template, let's use it!</p>
+<ul>
+<li>Inspect the &lt;body&gt; element to see what classes it has</li>
+<li>Write styles using the .js class and the .no-js class so that your toggle navigation is styled with and without Javascript enabled</li>
+<li>Test by turning off JS in your browser (hint: <a target="_blank" href="https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje?hl=en">useful Chrome plugin</a> makes this easy)</li>
+<li><span class="green">BONUS!</span> Write styles using the .mediaqueries class or .nomediaqueries class to create fallbacks for IE. To do this, you'll have to <a href="http://modernizr.com/download/">add a new custom Modernizr</a> script to your page.</li>
+</ul>
+</section>
+<section>
+<h2>Questions?</h2>
+<div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
+<div class ="clear"></div></div>
+</section>
+<section>
+<h2>Survey</h2>
+<p><a href=' http://bit.ly/rwd101'>http://bit.ly/rwd101</a></p>
+</section>
+</div>
+<footer>
+<div class="copyright">
+Responsive Web Design ~ Girl Develop It ~
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+</div>
+</footer>
+</div>
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.min.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+]
+});
+</script>
+</body>
+</html>
