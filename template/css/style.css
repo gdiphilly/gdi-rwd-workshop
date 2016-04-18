@@ -9,6 +9,10 @@ body {
     font-size: 1em;
 }
 
+img {
+
+}
+
 a {
     color: #006;
     text-decoration: none;
@@ -217,6 +221,10 @@ header nav ul li a {
 .callout-container .gifs ul li,
 .callout-container .callout ul li:last-of-type {
     border-bottom: none;
+}
+
+.gifs img {
+
 }
 
 .callout-container .callout ul li a {
