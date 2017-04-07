@@ -1,70 +1,6 @@
 /*Simple Default Responsive Stylesheet*/
-/* Reset */
-html,
-body,
-body div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-time,
-mark,
-audio,
-video {
+/* Reset - this resets the page otherwise browsers add in default margins and padding */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -127,7 +63,7 @@ h1 {
 	overflow: hidden;
 	background: transparent url('../img/logo.png') 0 0 no-repeat;
 }
-@media (-webkit-min-device-pixel-ratio: 2), 
+@media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 	background-image: url('../img/logo_retina.png');
 	background-size: 50%;
@@ -145,7 +81,7 @@ h2 {
 	width: auto;
 	padding: 10px 15px;
 	background: #FF8951;
-	border: 1px solid #E07A78; 
+	border: 1px solid #E07A78;
 	border-radius: 20px;
 	color: white;
 	font-weight: bold;
@@ -163,10 +99,10 @@ h2 {
 
 /*Box sizing for a better box model!*/
 /*
-* { 
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
-	box-sizing: border-box; 
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 	*behavior: url(/js/boxsizing.htc);
 }*/
 
@@ -290,7 +226,7 @@ header {
 		display: block;
 		width: auto;
 		background: #BEBEBE;
-		}		
+		}
 			.callout-container .callout ul li {
 				display: block;
 				border-bottom: 1px solid #BEBEBE;
@@ -352,10 +288,10 @@ footer {
 	.callout-container .callout {
 		margin-right: 60px;*/ /* 60px/960px */
 		width: 250px;
-	}	
+	}
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), 
+@media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 	.logo {
 		background-image: url("../img/logo_retina.png");
